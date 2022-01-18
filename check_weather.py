@@ -21,10 +21,14 @@ weather_parameters = {
 response = requests.get(WEATHER_ENDPOINT, params=weather_parameters)
 response.raise_for_status()
 weather_data = response.json()
-print(weather_data)
-print("=========================================================")
+# print(weather_data)
+# print("=========================================================")
 current_temperature = weather_data['current']['temp']
 feels_like = weather_data['current']['feels_like']
 # print(current_temperature)
 # print(feels_like)
+max_temperature = weather_data['daily'][0]['temp']['max']
+# print(max_temperature)
+min_temperature = weather_data['daily'][0]['temp']['min']
+# print(min_temperature)
 
