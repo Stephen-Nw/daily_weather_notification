@@ -17,11 +17,12 @@ print(dt[0])
 
 message = client.messages \
                 .create(
-                     body=f"Good morning, Beautiful. Here is your daily weather forecast:"
+                     body=f"Good morning, Beautiful."
+                          f"\n\n Here is your daily weather forecast:"
                           f"\nCurrent temp: {dt[0]}℉"
                           f"\nFeels like: {dt[1]}℉"
-                          f"\nMax temp: {dt[2]}℉"
-                          f"\nMin temp: {dt[3]}℉",
+                          f"\nHigh temp: {dt[2]}℉"
+                          f"\nLow temp: {dt[3]}℉",
                      from_=sender,
                      to=recipient
                  )
