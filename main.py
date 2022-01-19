@@ -10,15 +10,11 @@ auth_token = os.environ['TWILIO_AUTH_TOKEN']
 client = Client(account_sid, auth_token)
 
 dt = daily_temperature()
-print(dt)
-print(dt[0])
-
-# return current_temperature, feels_like, max_temperature, min_temperature
 
 message = client.messages \
                 .create(
                      body=f"Good morning, Beautiful."
-                          f"\n\n Here is your daily weather forecast:"
+                          f"\n\n Here is your daily Bartlesville weather forecast:"
                           f"\nCurrent temp: {dt[0]}℉"
                           f"\nFeels like: {dt[1]}℉"
                           f"\nHigh temp: {dt[2]}℉"
