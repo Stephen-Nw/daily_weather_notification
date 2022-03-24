@@ -15,6 +15,7 @@ message = client.messages \
                 .create(
                      body=f"Good morning, Beautiful."
                           f"\n\n Here is your daily Bartlesville weather forecast:"
+                          f"\nCurrent conditions: {dt[4]}"
                           f"\nCurrent temp: {dt[0]}℉"
                           f"\nFeels like: {dt[1]}℉"
                           f"\nHigh temp: {dt[2]}℉"

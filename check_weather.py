@@ -25,10 +25,11 @@ def daily_temperature():
     response.raise_for_status()
     weather_data = response.json()
     current_temperature = weather_data['current']['temp']
+    current_condition = weather_data['current']['weather'][0]['description']
     feels_like = weather_data['current']['feels_like']
     max_temperature = weather_data['daily'][0]['temp']['max']
     min_temperature = weather_data['daily'][0]['temp']['min']
-    return current_temperature, feels_like, max_temperature, min_temperature
+    return current_temperature, feels_like, max_temperature, min_temperature, current_condition
 
 
 
